@@ -17,4 +17,6 @@ services:
       - MQTT_ENABLED=true
       - MQTT_ADDRESS=mqtt.lorenz
       - MQTT_PORT=1883
+      - MQTT_USER=smahub
+      - MQTT_PASSWORD=smahub
       - SHM2_ENABLED=true
