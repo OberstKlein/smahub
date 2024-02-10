@@ -17,10 +17,4 @@ services:
       - MQTT_PASSWORD=smahub
       - SHM2_ENABLED=true
       - HA_MQTT_ENABLED=true
-      - HA_MQTT_ADDRESS=homeassistant
-    networks:
-      - backbone
-networks:
-  backbone:
-    name: smarthomelocal
-    external: true
+      - HA_MQTT_ADDRESS=hass.lorenz
