@@ -18,8 +18,8 @@ services:
       - SHM2_ENABLED=true
       - HA_MQTT_ENABLED=true
       - HA_MQTT_ADDRESS=homeassistant
-   networks:
-     - backbone
+    networks:
+      - backbone
 networks:
   backbone:
     name: smarthomelocal
