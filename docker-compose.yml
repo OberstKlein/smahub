@@ -10,13 +10,17 @@ services:
       - 5678:5678
     environment:
       - TZ=Europe/Berlin
-      - TRIPOWERX_ENABLED=false
-      - TRIPOWERX_ADDRESS=172.16.91.100
-      - TRIPOWERX_USER=user
-      - TRIPOWERX_PASSWORD=pwd
       - MQTT_ENABLED=true
-      - MQTT_ADDRESS=mqtt.lorenz
+      - MQTT_ADDRESS=mosquitto
       - MQTT_PORT=1883
       - MQTT_USER=smahub
       - MQTT_PASSWORD=smahub
       - SHM2_ENABLED=true
+      - HA_MQTT_ENABLED=true
+      - HA_MQTT_ADDRESS=homeassistant
+   networks:
+     - backbone
+networks:
+  backbone:
+    name: smarthomelocal
+    external: true
