@@ -3,18 +3,18 @@ services:
   smahub:
     build: .
     container_name: smahub
-    network_mode: "host"
+#    network_mode: "host"
     restart: unless-stopped
     # forward python debug server port - not necessary with network_mode: "host"
     #    ports:
     #      - 5678:5678
     environment:
-      - TZ=Europe/London
+      - TZ=Europe/Berlin
       - TRIPOWERX_ENABLED=true
-      - TRIPOWERX_ADDRESS=192.0.2.1
+      - TRIPOWERX_ADDRESS=172.16.91.100
       - TRIPOWERX_USER=user
       - TRIPOWERX_PASSWORD=pwd
       - MQTT_ENABLED=true
-      - MQTT_ADDRESS=192.0.2.2
+      - MQTT_ADDRESS=mqtt.lorenz
       - MQTT_PORT=1883
       - SHM2_ENABLED=true
