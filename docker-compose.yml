@@ -3,15 +3,15 @@ services:
   smahub:
     build: .
     container_name: smahub
-#    network_mode: "host"
+    network_mode: "host"
     restart: unless-stopped
     # forward python debug server port - not necessary with network_mode: "host"
-    ports:
-      - 5678:5678
+#    ports:
+ #     - 5678:5678
     environment:
       - TZ=Europe/Berlin
       - MQTT_ENABLED=true
-      - MQTT_ADDRESS=mosquitto
+      - MQTT_ADDRESS=mqtt.lorenz
       - MQTT_PORT=1883
       - MQTT_USER=smahub
       - MQTT_PASSWORD=smahub
