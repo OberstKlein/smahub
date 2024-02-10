@@ -3,7 +3,7 @@ services:
   smahub:
     build: .
     container_name: smahub
-    network_mode: "host"
+    network_mode: host
     restart: unless-stopped
     # forward python debug server port - not necessary with network_mode: "host"
 #    ports:
